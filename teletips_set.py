@@ -11,6 +11,20 @@ import asyncio
 from plugins.teletips_t import *
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.raw.functions.messages import UpdatePinnedMessage
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    footer_message = os.environ.get("FOOTER_MESSAGE", "Default footer message")
+    return f"Footer message: {footer_message}"
+
+if __name__ == "__main__":
+    # Use Render's environment variable PORT to bind the application
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 
 bot=Client(
     "Countdown-TeLeTiPs",
