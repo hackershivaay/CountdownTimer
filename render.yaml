@@ -1,0 +1,9 @@
+services:  
+- type: web   
+  name: countdown-timer    
+  env: python    
+  buildCommand: "pip install -r requirements.txt"    
+  startCommand: "python teletips_set.py"    
+  plan: free    
+  deploy:     
+    branch: main
