@@ -1,3 +1,21 @@
+## Deployment on Render
+
+1. Fork and clone this repository.
+2. Go to [Render](https://render.com) and create a new web service.
+3. Connect your GitHub account and select this repository.
+4. Render will automatically detect the `render.yaml` configuration.
+5. Add environment variables in Render:
+   - `FOOTER_MESSAGE` (optional)
+6. Click "Create Web Service" to deploy.
+
+## Local Development
+
+1. Ensure you have Python 3.x installed.
+2. Create a virtual environment and install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+
 <h1 align= center>CountdownTimer-TeLeTiPs</h1>
 <h3 align = center>The very first powerful Telegram bot to countdown to your important events in any group chat. Live countdown timer.
 <br>(days : hours : minutes : seconds)</h3>
