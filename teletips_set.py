@@ -19,7 +19,7 @@ bot=Client(
     bot_token = os.environ["BOT_TOKEN"]
 )
 
-footer_message = os.environ["FOOTER_MESSAGE"]
+footer_message = os.environ.get("FOOTER_MESSAGE", "Default footer message")
 
 stoptimer = False
 
